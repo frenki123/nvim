@@ -6,6 +6,8 @@ vim.keymap.set("n", "<C-Up>", "<C-u>zz")
 vim.keymap.set({"n", "v"}, "<leader>p", "\"+p")
 vim.keymap.set({"n", "v"}, "<leader>P", "\"+P")
 vim.keymap.set({"n", "v"}, "<leader>y", "\"+y")
+vim.keymap.set("i", "<C-v>", [[<C-r>+]])
+-- delete without registry
 vim.keymap.set({"n", "v"}, "<Del>", [["_<Del>]])
 -- move code lines
 vim.keymap.set("v", "<C-Down>", ":m '>+1<CR>gv=gv")
