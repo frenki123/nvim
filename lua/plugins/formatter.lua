@@ -5,7 +5,8 @@ return {
         conform.setup {
             formatters_by_ft = {
                 lua = { "stylua" },
-                python = {"ruff_format"},
+                python = { "ruff_format" },
+                go = { "goimports" },
             },
         }
         vim.keymap.set(
@@ -14,5 +15,16 @@ return {
             conform.format,
             { desc = "[F]ormat code" }
         )
+        vim.api.nvim_create_autocmd("BufWritePre", {
+
+            desc = "Autoformat code on save",
+            group = vim.api.nvim_create_augroup(
+                "autoformat-on-save",
+                { clear = true }
+            ),
+            callback = function()
+                conform.format()
+            end,
+        })
     end,
 }
