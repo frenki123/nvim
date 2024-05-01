@@ -49,8 +49,6 @@ return {
                     )
                     map("<F2>", vim.lsp.buf.rename, "Rename")
 
-                    map("<F5>", vim.lsp.buf.hover, "Hover Documentation")
-
                     map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
 
                     local client =

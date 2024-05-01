@@ -1,3 +1,4 @@
+vim.g.mapleader = " "
 -- set initial config from ./lua/config
 require "config"
 -- install lazyvim

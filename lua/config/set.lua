@@ -1,6 +1,9 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.showmode = false
+vim.opt.cursorline = true
 
+vim.o.expandtab = true
 vim.opt.smartindent = true
 vim.o.tabstop = 4
 vim.o.softtabstop = 4
@@ -18,6 +21,6 @@ vim.opt.smartcase = true
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 
-vim.opt.updatetime = 50
+vim.opt.updatetime = 250
 
 vim.opt.colorcolumn = "90"
